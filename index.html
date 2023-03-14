@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      h1{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: x larger;
+        color: #0e580e;
+        border: 0.1px solid #0e580e;
+        background-color: #e4f1e4;
+        width: 35%;
+        padding: 8px 15px;
+        border-radius: 4px;
+      }
+
+      form {
+        border: solid black 0.5px;
+        width: 50%
+        background-color: #ECECEC;
+        padding: 15px 20px;
+      }
+    input[type="email"], 
+    input[type="password"],
+    input[type="text"],
+    input[type="tel"],
+    select {
+      width: 50%;
+      display: block;
+      box-sizing: border-box;
+      padding: 0 5px;
+      height: 40px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 90%;
+      margin-bottom: 10px;
+      border: 1px solid #cdcdcd;
+      border-radius: 4px;
+    }
+
+    input[type="email"]:focus, 
+    input[type="password"]:focus,
+    input[type="text"]:focus,
+    input[type="tel"]:focus {
+      border: 1px solid #eedfdf;
+      box-shadow: ivory;
+    }
+
+    input[type="submit"] {
+      width: 50%;
+      display: block;
+      background-color: #919982;
+      color: #ECECEC;
+      padding: 8px 0;
+      border: 1px solid #919982;
+      border-radius: 4px;
+
+    }
+
+    input[type="submit"]:focus,
+    input[type="submit"]:hover {
+      border: 1px solid #535e53;
+      background-color: #075807;
+    }
+
+    .hidden-label {
+      position: absolute;
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+  
+    label {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: medium;
+      color: #113611;
+    }
+    
+  </style>
+
+</head>
+<body>
+    <h1>A Simple Form</h1>
+    
+    <form>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email" class="hidden-label">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <span class="error" id="email-error" style="display: none;">Please enter a valid email address</span>
+        
+        <label for="telephone">Telephone:</label>
+        <input id="telephone" type="tel" name="telephone" required>
+
+        <label>Gender:</label>
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label for="password" class="hidden-label">Password:</label>
+        <input id="password" type="password" name="name" placeholder="Password" required>
+
+        <input type="submit" value="SUBMIT">
+        <div class="success" id="success-message" style="display: none;">Success!</div>
+    </form>
+    
+         
+  
